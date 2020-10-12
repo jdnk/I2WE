@@ -1524,7 +1524,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-## FirebaseDatabase
+## FirebaseFirestore
 
 
                                  Apache License
@@ -1730,7 +1730,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    limitations under the License.
 
 
-## FirebaseFirestore
+## FirebaseFirestoreSwift
 
 
                                  Apache License

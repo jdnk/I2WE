@@ -24,10 +24,10 @@ struct User: Hashable, CustomStringConvertible {
 
 struct ContentView: View {
     @State var users: [User] = [
-        User(id: 0, firstName: "Daniel", lastName: "Kim", age: 20, img: "test", city: "Fullerton", state: "CA"),
-        User(id: 1, firstName: "Jaden", lastName: "Kim", age: 21, img: "ye", city: "Claremont", state: "CA"),
-        User(id: 2, firstName: "Elena", lastName: "Mujal", age: 20, img: "test", city: "Claremont", state: "CA"),
-        User(id: 3, firstName: "Abigail", lastName: "Andrews", age: 20, img: "ye", city: "Claremont", state: "CA")
+        User(id: 0, firstName: "Jaden", lastName: "Kim", age: 47, img: "test", city: "Claremont", state: "CA"),
+        User(id: 1, firstName: "Elena", lastName: "Mujal", age: 78, img: "elena", city: "Claremont", state: "CA"),
+        User(id: 2, firstName: "Abigail", lastName: "Andrews", age: 88, img: "abigail", city: "Claremont", state: "CA"),
+        User(id: 3, firstName: "Swamik", lastName: "Lamichhane", age: 20, img: "swamik", city: "Claremont", state: "CA")
     ]
     
     private func getCardWidth(_ geometry: GeometryProxy, id: Int) -> CGFloat {
@@ -112,15 +112,23 @@ struct CardView: View {
                             Text("\(self.user.firstName) \(self.user.lastName)")
                                 .font(.title)
                                 .fontWeight(.bold)
+                                .foregroundColor(no ? Color.white : (yes ? Color.white : Color.black))
+                                .animation(.linear)
                             Text("\(self.user.age)")
                                 .font(.title)
+                                .foregroundColor(no ? Color.white : (yes ? Color.white : Color.black))
+                                .animation(.linear)
                         }
                         Text("\(self.user.city), \(self.user.state)")
                             .font(.caption)
+                            .foregroundColor(no ? Color.white : (yes ? Color.white : Color.black))
+                            .animation(.linear)
                     }
                     
                     Spacer()
                     Text("ℹ︎")
+                        .foregroundColor(no ? Color.white : (yes ? Color.white : Color.black))
+                        .animation(.linear)
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)

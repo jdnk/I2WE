@@ -231,9 +231,6 @@ PODS:
   - Firebase/Crashlytics (6.34.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 4.6.2)
-  - Firebase/Database (6.34.0):
-    - Firebase/CoreOnly
-    - FirebaseDatabase (~> 6.6.0)
   - Firebase/Firestore (6.34.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.19.0)
@@ -271,9 +268,6 @@ PODS:
     - GoogleDataTransport (~> 7.2)
     - nanopb (~> 1.30906.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseDatabase (6.6.0):
-    - FirebaseCore (~> 6.10)
-    - leveldb-library (~> 1.22)
   - FirebaseFirestore (1.19.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
@@ -286,6 +280,8 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 1.30906.0)
+  - FirebaseFirestoreSwift (0.4.0):
+    - FirebaseFirestore (>= 1.6.1, ~> 1.6)
   - FirebaseInAppMessaging (0.24.0):
     - FirebaseABTesting (~> 4.2)
     - FirebaseCore (~> 6.10)
@@ -362,9 +358,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Crashlytics
-  - Firebase/Database
   - Firebase/Firestore
   - Firebase/InAppMessaging
+  - FirebaseFirestoreSwift
 
 SPEC REPOS:
   trunk:
@@ -377,8 +373,8 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCrashlytics
-    - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseFirestoreSwift
     - FirebaseInAppMessaging
     - FirebaseInstallations
     - GoogleAppMeasurement
@@ -401,8 +397,8 @@ SPEC CHECKSUMS:
   FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
   FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
   FirebaseCrashlytics: 1a747c9cc084a24dc6d9511c991db1cd078154eb
-  FirebaseDatabase: 13a865a4b85897462b930eb683bda8f52583713f
   FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
+  FirebaseFirestoreSwift: 2c46dbc1156db97dc4f6dd798d4f5b57b9c7fab6
   FirebaseInAppMessaging: 9da48721c6ad1b5bdc2b1108f2d3d561eb2245ca
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
@@ -415,6 +411,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 0be3b3a39346937cf2d2029791a028f3c6fa24ca
+PODFILE CHECKSUM: 9af4562e3d6b980a708f0d1142c1d0376b7fb4f4
 
 COCOAPODS: 1.9.3

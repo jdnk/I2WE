@@ -6,12 +6,12 @@ target 'I2WE' do
   use_frameworks!
 
   # Pods for I2WE
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
-  pod 'Firebase/InAppMessaging'
   pod 'Firebase/Auth'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/InAppMessaging'
 
 end

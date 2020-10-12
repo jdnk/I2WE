@@ -10,6 +10,9 @@ import Firebase
 
 @main
 struct I2WEApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -19,6 +22,7 @@ struct I2WEApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("Setting up Firebase...")
         FirebaseApp.configure()
         return true
     }
