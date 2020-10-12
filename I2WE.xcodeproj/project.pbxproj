@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,15 +11,21 @@
 		A13CDC5F25343A6600D7CD3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CDC5E25343A6600D7CD3E /* ContentView.swift */; };
 		A13CDC6125343A6700D7CD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6025343A6700D7CD3E /* Assets.xcassets */; };
 		A13CDC6425343A6700D7CD3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */; };
+		A1E706242534866900F4D1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1E706232534866900F4D1B4 /* GoogleService-Info.plist */; };
+		A5D818EC804B91D5E6C07FD6 /* Pods_I2WE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3100E68C015DCB910140AD /* Pods_I2WE.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E399E0EAE44E59812A585CB /* Pods-I2WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I2WE.debug.xcconfig"; path = "Target Support Files/Pods-I2WE/Pods-I2WE.debug.xcconfig"; sourceTree = "<group>"; };
 		A13CDC5925343A6600D7CD3E /* I2WE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = I2WE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CDC5C25343A6600D7CD3E /* I2WEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I2WEApp.swift; sourceTree = "<group>"; };
 		A13CDC5E25343A6600D7CD3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A13CDC6025343A6700D7CD3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A13CDC6525343A6700D7CD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1E706232534866900F4D1B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2829F2AED0CA6205CECB6A0 /* Pods-I2WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I2WE.release.xcconfig"; path = "Target Support Files/Pods-I2WE/Pods-I2WE.release.xcconfig"; sourceTree = "<group>"; };
+		EF3100E68C015DCB910140AD /* Pods_I2WE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I2WE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D818EC804B91D5E6C07FD6 /* Pods_I2WE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D26CBE8F4C808ECC1BA354 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF3100E68C015DCB910140AD /* Pods_I2WE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		696C941128BE3F8A47ED7D2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E399E0EAE44E59812A585CB /* Pods-I2WE.debug.xcconfig */,
+				D2829F2AED0CA6205CECB6A0 /* Pods-I2WE.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A13CDC5025343A6600D7CD3E = {
 			isa = PBXGroup;
 			children = (
 				A13CDC5B25343A6600D7CD3E /* I2WE */,
 				A13CDC5A25343A6600D7CD3E /* Products */,
+				696C941128BE3F8A47ED7D2C /* Pods */,
+				02D26CBE8F4C808ECC1BA354 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 				A13CDC5E25343A6600D7CD3E /* ContentView.swift */,
 				A13CDC6025343A6700D7CD3E /* Assets.xcassets */,
 				A13CDC6525343A6700D7CD3E /* Info.plist */,
+				A1E706232534866900F4D1B4 /* GoogleService-Info.plist */,
 				A13CDC6225343A6700D7CD3E /* Preview Content */,
 			);
 			path = I2WE;
@@ -76,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A13CDC6825343A6700D7CD3E /* Build configuration list for PBXNativeTarget "I2WE" */;
 			buildPhases = (
+				1C155922485BC64D5B2EF66C /* [CP] Check Pods Manifest.lock */,
 				A13CDC5525343A6600D7CD3E /* Sources */,
 				A13CDC5625343A6600D7CD3E /* Frameworks */,
 				A13CDC5725343A6600D7CD3E /* Resources */,
+				9668913B430D828EC6BA0D56 /* [CP] Embed Pods Frameworks */,
+				4F7EF6D0626AA7F598EB9651 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,10 +158,70 @@
 			files = (
 				A13CDC6425343A6700D7CD3E /* Preview Assets.xcassets in Resources */,
 				A13CDC6125343A6700D7CD3E /* Assets.xcassets in Resources */,
+				A1E706242534866900F4D1B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C155922485BC64D5B2EF66C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-I2WE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7EF6D0626AA7F598EB9651 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9668913B430D828EC6BA0D56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-I2WE/Pods-I2WE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A13CDC5525343A6600D7CD3E /* Sources */ = {
@@ -264,6 +354,7 @@
 		};
 		A13CDC6925343A6700D7CD3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E399E0EAE44E59812A585CB /* Pods-I2WE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +377,7 @@
 		};
 		A13CDC6A25343A6700D7CD3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2829F2AED0CA6205CECB6A0 /* Pods-I2WE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
