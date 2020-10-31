@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MatchesView: View {
     var store = UsersStore()
+    @State var showMatch: Bool = false
     
     var count: Int = 0
     
@@ -24,7 +25,9 @@ struct MatchesView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                             ForEach(store.users, id: \.self) { user in
-                                Image(store.users[user.id].img)
+                                Button(action: self.showMatch.toggle(), label: {
+                                    Image(store.users[user.id].img)
+                                })
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.height * 0.25)
@@ -32,7 +35,7 @@ struct MatchesView: View {
                                     .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
                                     .padding(.horizontal, 20)
                                     .padding(.top, 20)
-                                    .sheet(item: <#T##Binding<Identifiable?>#>, content: <#T##(Identifiable) -> View#>)
+                                    .sheet(isPresented: showMatch, content: CardView()) // change to ProfileView
                             }
                         }
                     }

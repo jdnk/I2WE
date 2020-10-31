@@ -11,16 +11,18 @@ struct SurveyView: View {
     @ObservedObject var store = SurveyStore()
     
     var body: some View {
-        ForEach(store.survey) { question in
-            VStack {
-                Text(question.question)
-                    .font(.title)
-                    .fontWeight(.bold)
-                ForEach(0..<question.choices.count) { choice in
-                    Button(question.choices[choice]) {
-                        question.selection = choice
+        ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
+            ForEach(store.survey) { question in
+                VStack {
+                    Text(question.question)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    ForEach(0..<question.choices.count) { choice in
+                        Button(question.choices[choice]) {
+                            question.selection = choice
+                        }
+                        // STYLING
                     }
-                    // STYLING
                 }
             }
         }
