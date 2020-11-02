@@ -12,15 +12,12 @@
 		A13CDC5F25343A6600D7CD3E /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CDC5E25343A6600D7CD3E /* SwipeView.swift */; };
 		A13CDC6125343A6700D7CD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6025343A6700D7CD3E /* Assets.xcassets */; };
 		A13CDC6425343A6700D7CD3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */; };
-		A1615DFC254DE60F00DA7DBC /* SurveryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615DFB254DE60F00DA7DBC /* SurveryStore.swift */; };
 		A1615DFF254DE62F00DA7DBC /* UsersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615DFE254DE62F00DA7DBC /* UsersStore.swift */; };
 		A1615E02254DE63A00DA7DBC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E01254DE63A00DA7DBC /* Home.swift */; };
-		A1615E05254DE7F800DA7DBC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E04254DE7F800DA7DBC /* CardView.swift */; };
 		A1615E08254DEC1D00DA7DBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E07254DEC1D00DA7DBC /* User.swift */; };
-		A1615E18254E02CF00DA7DBC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E17254E02CF00DA7DBC /* Question.swift */; };
+		A170EC1D254FE34F0051C342 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170EC1C254FE34F0051C342 /* CardView.swift */; };
 		A1B93610253E0E130070DB17 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B9360F253E0E130070DB17 /* MatchesView.swift */; };
 		A1E706242534866900F4D1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1E706232534866900F4D1B4 /* GoogleService-Info.plist */; };
-		A1F3EA83254747CA000B45A4 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3EA82254747CA000B45A4 /* SurveyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,15 +29,12 @@
 		A13CDC6025343A6700D7CD3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A13CDC6525343A6700D7CD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1615DFB254DE60F00DA7DBC /* SurveryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveryStore.swift; sourceTree = "<group>"; };
 		A1615DFE254DE62F00DA7DBC /* UsersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStore.swift; sourceTree = "<group>"; };
 		A1615E01254DE63A00DA7DBC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		A1615E04254DE7F800DA7DBC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A1615E07254DEC1D00DA7DBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A1615E17254E02CF00DA7DBC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A170EC1C254FE34F0051C342 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A1B9360F253E0E130070DB17 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		A1E706232534866900F4D1B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A1F3EA82254747CA000B45A4 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		CF5F7767B611FAA3CB8A8DB5 /* Pods_I2WE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I2WE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,13 +91,10 @@
 				A13CDC5C25343A6600D7CD3E /* I2WEApp.swift */,
 				A1615E01254DE63A00DA7DBC /* Home.swift */,
 				A1615E07254DEC1D00DA7DBC /* User.swift */,
-				A1615E04254DE7F800DA7DBC /* CardView.swift */,
 				A1615DFE254DE62F00DA7DBC /* UsersStore.swift */,
 				A13CDC5E25343A6600D7CD3E /* SwipeView.swift */,
+				A170EC1C254FE34F0051C342 /* CardView.swift */,
 				A1B9360F253E0E130070DB17 /* MatchesView.swift */,
-				A1615E17254E02CF00DA7DBC /* Question.swift */,
-				A1F3EA82254747CA000B45A4 /* SurveyView.swift */,
-				A1615DFB254DE60F00DA7DBC /* SurveryStore.swift */,
 				A13CDC6025343A6700D7CD3E /* Assets.xcassets */,
 				A13CDC6525343A6700D7CD3E /* Info.plist */,
 				A1E706232534866900F4D1B4 /* GoogleService-Info.plist */,
@@ -252,12 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F3EA83254747CA000B45A4 /* SurveyView.swift in Sources */,
-				A1615E05254DE7F800DA7DBC /* CardView.swift in Sources */,
+				A170EC1D254FE34F0051C342 /* CardView.swift in Sources */,
 				A13CDC5F25343A6600D7CD3E /* SwipeView.swift in Sources */,
-				A1615DFC254DE60F00DA7DBC /* SurveryStore.swift in Sources */,
 				A1B93610253E0E130070DB17 /* MatchesView.swift in Sources */,
-				A1615E18254E02CF00DA7DBC /* Question.swift in Sources */,
 				A13CDC5D25343A6600D7CD3E /* I2WEApp.swift in Sources */,
 				A1615E02254DE63A00DA7DBC /* Home.swift in Sources */,
 				A1615E08254DEC1D00DA7DBC /* User.swift in Sources */,

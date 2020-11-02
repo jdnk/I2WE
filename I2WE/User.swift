@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct User: Hashable, CustomStringConvertible {
+struct User: Hashable, CustomStringConvertible, Identifiable {
     var id: Int
     
     let firstName: String

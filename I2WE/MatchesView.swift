@@ -15,7 +15,6 @@ struct MatchesView: View {
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.9886991734, green: 0.6800984073, blue: 0.7332561142, alpha: 1)).ignoresSafeArea()
             VStack {
                 Text("Matches")
                     .font(.largeTitle)
@@ -25,17 +24,16 @@ struct MatchesView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                             ForEach(store.users, id: \.self) { user in
-                                Button(action: self.showMatch.toggle(), label: {
+                                Button(action: {self.showMatch.toggle()}) {
                                     Image(store.users[user.id].img)
-                                })
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.height * 0.25)
-                                    .clipped()
-                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
-                                    .padding(.horizontal, 20)
-                                    .padding(.top, 20)
-                                    .sheet(isPresented: showMatch, content: CardView()) // change to ProfileView
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.height * 0.25)
+                                        .clipped()
+                                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 3)
+                                        .padding(.top, 20)
+                                        .padding(.horizontal, 20)
+                                }
                             }
                         }
                     }

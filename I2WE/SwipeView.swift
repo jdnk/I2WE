@@ -10,41 +10,39 @@ import SwiftUI
 struct SwipeView: View {
     @ObservedObject var store = UsersStore()
     
-//    private func getCardWidth(_ geometry: GeometryProxy, id: Int) -> CGFloat {
-//        let offset: CGFloat = CGFloat(users.count - 1 - id) * 10
-//        return geometry.size.width - offset
-//    }
-    
-//    private func getCardOffset(_ geometry: GeometryProxy, id: Int) -> CGFloat {
-//        return CGFloat(users.count - 1 - id) * 10
-//    }
-    
+    // Compute what the max ID in the given users array is.
     private var maxID: Int {
         return store.users.map { $0.id }.max() ?? 0
     }
     
+    private func getCardWidth(_ geometry: GeometryProxy, id: Int) -> CGFloat {
+        let offset: CGFloat = CGFloat(store.users.count - 1 - id) * 10
+            return geometry.size.width - offset
+        }
+    
     var body: some View {
-        ZStack {
-            Color(#colorLiteral(red: 0.08712410182, green: 0.08219537884, blue: 0.1289232969, alpha: 1)).ignoresSafeArea()
             VStack {
                 GeometryReader { geometry in
-                    ZStack {
-                        ForEach(store.users, id: \.self) { user in
-                            if user.id > self.maxID-1 {
-                                CardView(user: user, onRemove: { removedUser in
-                                    store.users.removeAll { $0.id == removedUser.id }
-                                    })
-                                .frame(width: geometry.size.width, height: geometry.size.height - 250)
-                                .background(Color.white)
+                    VStack {
+                        Spacer()
+                        ZStack {
+                            ForEach(store.users, id: \.self) { user in
+                                if user.id > self.maxID - 1 {
+                                    CardView(user: user, onRemove: { removedUser in
+                                       // Remove that user from our array
+                                       store.users.removeAll { $0.id == removedUser.id }
+                                      })
+                                      .frame(width: self.getCardWidth(geometry, id: user.id),
+                                             height: 400)
+                                }
                             }
                         }
+                        Spacer()
                     }
                 }
-                .padding(20)
-            }
+            }.padding()
         }
     }
-}
 
 struct SwipeView_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,7 +15,7 @@ struct I2WEApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SwipeView()
+            Home()
         }
     }
 }
