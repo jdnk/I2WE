@@ -15,7 +15,7 @@ struct User: Hashable, CustomStringConvertible, Identifiable {
     let firstName: String
     let lastName: String
     var age: Int
-    var img: String
+    var imgs: [Int:UIImage]
     var pronouns: Int
     var city: String = "None"
     var state: String = "None"

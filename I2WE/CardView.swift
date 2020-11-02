@@ -49,7 +49,7 @@ struct CardView: View {
         
         GeometryReader { geometry in
             VStack(alignment: .leading) {
-                Image(self.user.img)
+                Image(self.user.imgs[0]!) // FIX THIS
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width - 40, height: geometry.size.height - 40)
@@ -151,7 +151,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: User(id: 0, email: "jaden.kim@pomona.edu", password: "Testword47", firstName: "Jaden", lastName: "Kim", age: 47, img: "test", pronouns: 0, city: "Claremont", state: "CA", pref: 0, bio: "Test", emoji: "🐧", zodiac: 10, mbti: "ENFP"),
+        CardView(user: User(id: 0, email: "jaden.kim@pomona.edu", password: "Testword47", firstName: "Jaden", lastName: "Kim", age: 47, imgs: [0:"test"], pronouns: 0, city: "Claremont", state: "CA", pref: 0, bio: "Test", emoji: "🐧", zodiac: 10, mbti: "ENFP"),
                          onRemove: { _ in
                             // do nothing
                     })

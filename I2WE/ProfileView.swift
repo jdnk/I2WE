@@ -26,7 +26,7 @@ struct ProfileView: View {
         ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
             GeometryReader { geometry in
                 VStack(alignment: .leading) {
-                    Image(store.users[id].img)
+                    Image(store.users[id].imgs[0]!) // FIX THIS
                         .resizable()
                         .scaledToFill()
                         .frame(width: geometry.size.width, height: geometry.size.width)

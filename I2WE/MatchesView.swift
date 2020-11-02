@@ -23,7 +23,7 @@ struct MatchesView: View {
                             self.curID = user.id
                             self.showMatch.toggle()
                         }) {
-                            Image(store.users[user.id].img)
+                            Image(store.users[user.id].imgs[0]!) // FIX THIS
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.width * 0.5 - 40)
