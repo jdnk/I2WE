@@ -32,7 +32,7 @@ struct SwipeView: View {
                                        store.users.removeAll { $0.id == removedUser.id }
                                       })
                                       .frame(width: self.getCardWidth(geometry, id: user.id),
-                                             height: geometry.size.height-200)
+                                             height: geometry.size.height - 127)
                                 }
                             }
                         }

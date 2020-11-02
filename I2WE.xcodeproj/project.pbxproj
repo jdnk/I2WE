@@ -14,8 +14,9 @@
 		A13CDC6425343A6700D7CD3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */; };
 		A13FE60625501250006B4D5F /* ZodiacStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FE60525501250006B4D5F /* ZodiacStore.swift */; };
 		A13FE60A25506CBC006B4D5F /* PronounStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FE60925506CBC006B4D5F /* PronounStore.swift */; };
+		A13FE60E25507599006B4D5F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FE60D25507599006B4D5F /* TabBar.swift */; };
+		A13FE61225507DC0006B4D5F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FE61125507DC0006B4D5F /* AccountView.swift */; };
 		A1615DFF254DE62F00DA7DBC /* UsersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615DFE254DE62F00DA7DBC /* UsersStore.swift */; };
-		A1615E02254DE63A00DA7DBC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E01254DE63A00DA7DBC /* Home.swift */; };
 		A1615E08254DEC1D00DA7DBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1615E07254DEC1D00DA7DBC /* User.swift */; };
 		A170EC1D254FE34F0051C342 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170EC1C254FE34F0051C342 /* CardView.swift */; };
 		A170EC202550018B0051C342 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A170EC1F2550018B0051C342 /* ProfileView.swift */; };
@@ -34,8 +35,9 @@
 		A13CDC6525343A6700D7CD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A13FE60525501250006B4D5F /* ZodiacStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacStore.swift; sourceTree = "<group>"; };
 		A13FE60925506CBC006B4D5F /* PronounStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronounStore.swift; sourceTree = "<group>"; };
+		A13FE60D25507599006B4D5F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		A13FE61125507DC0006B4D5F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		A1615DFE254DE62F00DA7DBC /* UsersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStore.swift; sourceTree = "<group>"; };
-		A1615E01254DE63A00DA7DBC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A1615E07254DEC1D00DA7DBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A170EC1C254FE34F0051C342 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A170EC1F2550018B0051C342 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -95,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				A13CDC5C25343A6600D7CD3E /* I2WEApp.swift */,
-				A1615E01254DE63A00DA7DBC /* Home.swift */,
 				A1615E07254DEC1D00DA7DBC /* User.swift */,
 				A1615DFE254DE62F00DA7DBC /* UsersStore.swift */,
 				A13FE60525501250006B4D5F /* ZodiacStore.swift */,
@@ -104,6 +105,8 @@
 				A13CDC5E25343A6600D7CD3E /* SwipeView.swift */,
 				A1B9360F253E0E130070DB17 /* MatchesView.swift */,
 				A170EC1F2550018B0051C342 /* ProfileView.swift */,
+				A13FE61125507DC0006B4D5F /* AccountView.swift */,
+				A13FE60D25507599006B4D5F /* TabBar.swift */,
 				A13CDC6025343A6700D7CD3E /* Assets.xcassets */,
 				A13CDC6525343A6700D7CD3E /* Info.plist */,
 				A1E706232534866900F4D1B4 /* GoogleService-Info.plist */,
@@ -256,10 +259,11 @@
 				A170EC1D254FE34F0051C342 /* CardView.swift in Sources */,
 				A13CDC5F25343A6600D7CD3E /* SwipeView.swift in Sources */,
 				A1B93610253E0E130070DB17 /* MatchesView.swift in Sources */,
+				A13FE61225507DC0006B4D5F /* AccountView.swift in Sources */,
 				A13FE60625501250006B4D5F /* ZodiacStore.swift in Sources */,
 				A13FE60A25506CBC006B4D5F /* PronounStore.swift in Sources */,
 				A13CDC5D25343A6600D7CD3E /* I2WEApp.swift in Sources */,
-				A1615E02254DE63A00DA7DBC /* Home.swift in Sources */,
+				A13FE60E25507599006B4D5F /* TabBar.swift in Sources */,
 				A1615E08254DEC1D00DA7DBC /* User.swift in Sources */,
 				A1615DFF254DE62F00DA7DBC /* UsersStore.swift in Sources */,
 			);

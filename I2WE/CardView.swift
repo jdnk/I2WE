@@ -59,7 +59,7 @@ struct CardView: View {
                 
                     VStack(alignment: .leading) {
                             HStack() {
-                                Text("\(self.user.firstName) \(self.user.lastName)")
+                                Text("\(self.user.firstName)")
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                     .foregroundColor(textColor)
