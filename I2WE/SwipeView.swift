@@ -24,7 +24,6 @@ struct SwipeView: View {
             VStack {
                 GeometryReader { geometry in
                     VStack {
-                        Spacer()
                         ZStack {
                             ForEach(store.users, id: \.self) { user in
                                 if user.id > self.maxID - 1 {
@@ -33,11 +32,10 @@ struct SwipeView: View {
                                        store.users.removeAll { $0.id == removedUser.id }
                                       })
                                       .frame(width: self.getCardWidth(geometry, id: user.id),
-                                             height: 400)
+                                             height: geometry.size.height-200)
                                 }
                             }
                         }
-                        Spacer()
                     }
                 }
             }.padding()
