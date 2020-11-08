@@ -6,34 +6,38 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct AccountView: View {
-    @ObservedObject var store = UsersStore()
+    @EnvironmentObject var userInfo: UserInfo
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showError = false
+    @State private var errorString = ""
     
-    @State var showPhotoLibrary = false
-    @State var img = UIImage()
-    
-    private var id: Int = 0
-    
-    var count: Int = 0
-    
+    private var curUser = Auth.auth().currentUser?.uid
+    private var docRef = Firestore
+        .firestore()
+        .collection(FBKeys.CollectionPath.users)
+
     var body: some View {
-        GeometryReader { geometry in
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
-                ForEach(0..<4) { i in
-                    Button(action: {
-                        self.showPhotoLibrary = true
-                        store.users[id].imgs[i] = img
-                    }) {
-                        Image(systemName: "plus")
-                            .background(Color.white)
-                            .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.width * 0.5 - 40)
-                            .clipped()
-                                .border(Color.black, width: 3)
-                                .padding(.top, 10)
-                            .padding(.horizontal, 20)
+        docRef.document(curUser!)
+            .getDocument { (snapshot, err) in
+            if let document = snapshot {
+            let user = User.transformUser(dict: document.data()!, key: document.documentID)
+                completion(user)
+             } else {
+              print("Document does not exist")
+            }
+        
+        NavigationView {
+            VStack {
+                Group {
+                    VStack(alignment: .leading) {
                     }
+                        Text("Yo")
                     }
+                }
             }
         }
     }

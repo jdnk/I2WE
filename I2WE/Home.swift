@@ -1,27 +1,27 @@
 //
-//  TabBar.swift
+//  Home.swift
 //  I2WE
 //
 //  Created by Jaden Kim on 11/2/20.
 //
 
 import SwiftUI
+import Firebase
 
-struct TabBar: View {
-    
+struct Home: View {
     init() {
         let appearance = UITabBarAppearance()
-        appearance.configureWithTransparentBackground()
+        appearance.configureWithOpaqueBackground()
         UITabBar.appearance().standardAppearance = appearance
     }
     
     var body: some View {
         TabView {
-            SwipeView().tabItem {
+            SearchView().tabItem {
                 Image(systemName: "person.3.fill")
             }
-            MatchesView().tabItem {
-                Image(systemName: "person.2.fill")
+            ChatView().tabItem {
+                Image(systemName: "paperplane.fill")
             }
             AccountView().tabItem {
                 Image(systemName: "person.circle.fill")
@@ -33,6 +33,6 @@ struct TabBar: View {
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        Home()
     }
 }

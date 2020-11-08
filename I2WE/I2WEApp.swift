@@ -14,8 +14,10 @@ struct I2WEApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
+        var userInfo = UserInfo()
+        
         WindowGroup {
-            TabBar()
+            ContentView().environmentObject(userInfo)
         }
     }
 }

@@ -5,9 +5,6 @@
 //  Created by Jaden Kim on 11/2/20.
 //
 
-import SwiftUI
-
-import SwiftUI
 import Combine
 
 class PronounStore: ObservableObject {

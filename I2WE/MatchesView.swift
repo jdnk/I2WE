@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MatchesView: View {
-    var store = UsersStore()
+    @ObservedObject var store = UsersStore()
     @State var showMatch: Bool = false
     @State var curID: Int = -1
     
@@ -23,7 +23,7 @@ struct MatchesView: View {
                             self.curID = user.id
                             self.showMatch.toggle()
                         }) {
-                            Image(store.users[user.id].imgs[0]!) // FIX THIS
+                            Image(UIImage: store.users[user.id].imgs[0]!) // FIX THIS
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: geometry.size.width * 0.5 - 40, height: geometry.size.width * 0.5 - 40)
@@ -33,7 +33,7 @@ struct MatchesView: View {
                                 .padding(.horizontal, 20)
                         }
                         .sheet(isPresented: $showMatch, content: {
-                            ProfileView(id: curID)
+                            // ProfileView(id: curID)
                         })
                     }
                 }

@@ -22,15 +22,16 @@ struct CardView: View {
 
     @ObservedObject var zodiac = ZodiacStore()
     @ObservedObject var pronouns = PronounStore()
+    @ObservedObject var mbti = MBTIStore()
       
-    private var user: User
-    private var onRemove: (_ user: User) -> Void
+    private var user: UserViewModel
+    private var onRemove: (_ user: UserViewModel) -> Void
     
      // 2
     private var threshold: CGFloat = 0.5 // when the user has draged 50% the width of the screen in either direction
     
     // 3
-    init(user: User, onRemove: @escaping (_ user: User) -> Void) {
+    init(user: UserViewModel, onRemove: @escaping (_ user: UserViewModel) -> Void) {
         self.user = user
         self.onRemove = onRemove
     }
@@ -46,16 +47,19 @@ struct CardView: View {
     var body: some View {
         let zod: Int = self.user.zodiac
         let pro: Int = self.user.pronouns
+        let mb: Int = self.user.mbti
         
         GeometryReader { geometry in
             VStack(alignment: .leading) {
-                Image(self.user.imgs[0]!) // FIX THIS
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width - 40, height: geometry.size.height - 40)
-                    .clipped()
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
+                ZStack {
+                    Image(uiImage: self.user.imgs[0]!) // FIX THIS
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometry.size.width - 40, height: geometry.size.height - 40)
+                        .clipped()
+                        .padding(.horizontal, 20)
+                        .padding(.top, 20)
+                }
                 
                     VStack(alignment: .leading) {
                             HStack() {
@@ -77,9 +81,9 @@ struct CardView: View {
                         }
                         
                         HStack {
-                            if (self.user.mbti != "None") {
-                                Text("\(self.user.mbti)")
-                                        .font(.caption)
+                            if (mb != -1) {
+                                Text("\(mbti.mbti[mb]!)")
+                                    .font(.caption)
                                     .foregroundColor(Color.white)
                                     .padding(5)
                                     .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
@@ -93,7 +97,7 @@ struct CardView: View {
                                     .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
                                     .cornerRadius(20)
                             }
-                            Text("\(self.user.city), \(self.user.state)")
+                            Text("\(self.user.loc[0]), \(self.user.loc[1])")
                                     .font(.caption)
                                 .foregroundColor(Color.white)
                                 .padding(5)
@@ -105,7 +109,7 @@ struct CardView: View {
                     .padding(.bottom, 20)
                 }
                 .background(bgColor)
-                .border(textColor, width: 3)
+                .border(Color.black, width: 3)
                 .animation(.linear)
                 .gesture(
                     DragGesture()
@@ -151,7 +155,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: User(id: 0, email: "jaden.kim@pomona.edu", password: "Testword47", firstName: "Jaden", lastName: "Kim", age: 47, imgs: [0:"test"], pronouns: 0, city: "Claremont", state: "CA", pref: 0, bio: "Test", emoji: "🐧", zodiac: 10, mbti: "ENFP"),
+        CardView(user: UserViewModel(email: "jaden.kim@pomona.edu", password: "Testword47", firstName: "Jaden", lastName: "Kim", age: 47, imgs: [0:UIImage(imageLiteralResourceName: "test")], pronouns: 0, loc: ["Claremont", "CA"], bio: "Test", emoji: "🐧", zodiac: 10, mbti: 9),
                          onRemove: { _ in
                             // do nothing
                     })

@@ -12,6 +12,7 @@ struct ProfileView: View {
     @ObservedObject var store = UsersStore()
     @ObservedObject var zodiac = ZodiacStore()
     @ObservedObject var pronouns = PronounStore()
+    @ObservedObject var mbti = MBTIStore()
     
     private var id: Int
     
@@ -22,11 +23,12 @@ struct ProfileView: View {
     var body: some View {
         let zod: Int = store.users[id].zodiac
         let pro: Int = store.users[id].pronouns
+        let mb: Int = store.users[id].mbti
         
         ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
             GeometryReader { geometry in
                 VStack(alignment: .leading) {
-                    Image(store.users[id].imgs[0]!) // FIX THIS
+                    Image(uiImage: store.users[id].imgs[0]!) // FIX THIS
                         .resizable()
                         .scaledToFill()
                         .frame(width: geometry.size.width, height: geometry.size.width)
