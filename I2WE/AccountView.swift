@@ -8,33 +8,22 @@
 import SwiftUI
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 struct AccountView: View {
     @EnvironmentObject var userInfo: UserInfo
     @Environment(\.presentationMode) var presentationMode
-    @State private var showError = false
-    @State private var errorString = ""
+    @State var showError = false
+    @State var errorString = ""
     
-    private var curUser = Auth.auth().currentUser?.uid
-    private var docRef = Firestore
-        .firestore()
-        .collection(FBKeys.CollectionPath.users)
+    var good: Int = FBAuth.getCurUser()
 
     var body: some View {
-        docRef.document(curUser!)
-            .getDocument { (snapshot, err) in
-            if let document = snapshot {
-            let user = User.transformUser(dict: document.data()!, key: document.documentID)
-                completion(user)
-             } else {
-              print("Document does not exist")
-            }
         
         NavigationView {
             VStack {
                 Group {
                     VStack(alignment: .leading) {
-                    }
                         Text("Yo")
                     }
                 }

@@ -14,7 +14,15 @@ struct I2WEApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        var userInfo = UserInfo()
+        // TODO:
+        // Add profile, search, inbox, matches
+        // Fix age on signup
+        // Fix name, email, age updates
+        // Add completion handlers for FBAuth.updateUser and FBAuth.getUser, add error checking
+        // Organize files
+        // Other bug fixes
+        
+        let userInfo = UserInfo()
         
         WindowGroup {
             ContentView().environmentObject(userInfo)
