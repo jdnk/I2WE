@@ -25,8 +25,12 @@ enum FBKeys {
         static let emoji = "emoji"
         static let zodiac = "zodiac"
         static let mbti = "mbti"
-        static let pref = "pref"
+        static let genderPref = "genderPref"
         static let agePref = "agePref"
+        static let locPref = "locPref"
+        static let zodPref = "zodPref"
+        static let mbtiPref = "mbtiPref"
+        static let emojiPref = "emojiPref"
         static let swiped = "swiped"
         static let swipedBy = "swipedBy"
     }

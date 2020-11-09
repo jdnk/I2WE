@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		182FE057E3CFAC4162DE8CE1 /* Pods_I2WE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5F7767B611FAA3CB8A8DB5 /* Pods_I2WE.framework */; };
+		A115AE042558BE0700B6C1B9 /* FBActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115AE032558BE0700B6C1B9 /* FBActions.swift */; };
 		A13CDC5D25343A6600D7CD3E /* I2WEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CDC5C25343A6600D7CD3E /* I2WEApp.swift */; };
 		A13CDC6125343A6700D7CD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6025343A6700D7CD3E /* Assets.xcassets */; };
 		A13CDC6425343A6700D7CD3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CDC6325343A6700D7CD3E /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2F53EB76480B681F61EE98F5 /* Pods-I2WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I2WE.release.xcconfig"; path = "Target Support Files/Pods-I2WE/Pods-I2WE.release.xcconfig"; sourceTree = "<group>"; };
 		39964D87CD76D37CDB80ACAA /* Pods-I2WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I2WE.debug.xcconfig"; path = "Target Support Files/Pods-I2WE/Pods-I2WE.debug.xcconfig"; sourceTree = "<group>"; };
+		A115AE032558BE0700B6C1B9 /* FBActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBActions.swift; sourceTree = "<group>"; };
 		A13CDC5925343A6600D7CD3E /* I2WE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = I2WE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CDC5C25343A6600D7CD3E /* I2WEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I2WEApp.swift; sourceTree = "<group>"; };
 		A13CDC6025343A6700D7CD3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A1882CDA25576ACD005B43FC /* FBUser.swift */,
 				A1882CDD25576F2F005B43FC /* FBKeys.swift */,
 				A1882CD52557696E005B43FC /* FBAuth.swift */,
+				A115AE032558BE0700B6C1B9 /* FBActions.swift */,
 				A1882CD62557696E005B43FC /* FBAuthError.swift */,
 				A1882CE725577A8E005B43FC /* UserInfo.swift */,
 				A1615E07254DEC1D00DA7DBC /* UserViewModel.swift */,
@@ -346,6 +349,7 @@
 				A13FE60E25507599006B4D5F /* Home.swift in Sources */,
 				A13FE61B2550AADE006B4D5F /* SearchView.swift in Sources */,
 				A1882CC825575639005B43FC /* SignUpView.swift in Sources */,
+				A115AE042558BE0700B6C1B9 /* FBActions.swift in Sources */,
 				A1882CDB25576ACD005B43FC /* FBUser.swift in Sources */,
 				A13FE61525508BA7006B4D5F /* ImagePicker.swift in Sources */,
 				A1882CC925575639005B43FC /* SignInWithEmailView.swift in Sources */,

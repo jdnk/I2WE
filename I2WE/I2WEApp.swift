@@ -15,9 +15,11 @@ struct I2WEApp: App {
     
     var body: some Scene {
         // TODO:
-        // Add profile, search, inbox, matches
+        // Add profile, search, inbox, matches UIs
+        // Add chat (everything)
         // Fix age on signup
-        // Fix name, email, age updates
+        // Account for 'ALL' in search 
+        // Fix name, email, age updates (GOOD)
         // Add completion handlers for FBAuth.updateUser and FBAuth.getUser, add error checking
         // Organize files
         // Other bug fixes

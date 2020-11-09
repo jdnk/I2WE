@@ -26,8 +26,12 @@ struct FBUser {
     var mbti: Int = -1 // Meyers-Briggs
     
     // search prefs
-    var pref: Int = 0 // 0=everyone, 1=men, 2=women
-    var agePref: [Int] = [18, 70] // 70+
+    var genderPref: [Int] = [] // 0=everyone, 1=men, 2=women
+    var agePref: [Int] = [] // 70+
+    var locPref: [[String]] = []
+    var zodPref: [Int] = []
+    var mbtiPref: [Int] = []
+    var emojiPref: [String] = []
 
     // matching
     var swiped: [String] = []
@@ -38,7 +42,7 @@ struct FBUser {
         return "uid: \(uid), email: \(email)"
     }
     
-    init(uid: String, email: String, firstName: String, lastName: String, age: Int, imgs: [Int:UIImage] = [:], pronouns: Int = -1, loc: [String] = [], bio: String = "", emoji: String = "", zodiac: Int = -1, mbti: Int = -1, pref: Int = -1, agePref: [Int] = [], swiped: [String] = [], swipedBy: [String] = []) {
+    init(uid: String, email: String, firstName: String, lastName: String, age: Int, imgs: [Int:UIImage] = [:], pronouns: Int = -1, loc: [String] = [], bio: String = "", emoji: String = "", zodiac: Int = -1, mbti: Int = -1, genderPref: [Int] = [], agePref: [Int] = [], locPref: [[String]] = [], zodPref: [Int] = [], mbtiPref: [Int] = [], emojiPref: [String] = [], swiped: [String] = [], swipedBy: [String] = []) {
         self.uid = uid
         self.email = email
         self.firstName = firstName
@@ -53,8 +57,12 @@ struct FBUser {
         self.zodiac = zodiac
         self.mbti = mbti
         
-        self.pref = pref
+        self.genderPref = genderPref
         self.agePref = agePref
+        self.locPref = locPref
+        self.zodPref = zodPref
+        self.mbtiPref = mbtiPref
+        self.emojiPref = emojiPref
         
         self.swiped = swiped
         self.swipedBy = swipedBy
@@ -79,8 +87,12 @@ extension FBUser {
         let zodiac = documentData[FBKeys.User.zodiac] as? Int ?? -1
         let mbti = documentData[FBKeys.User.mbti] as? Int ?? -1
         
-        let pref = documentData[FBKeys.User.pref] as? Int ?? -1
-        let agePref = documentData[FBKeys.User.imgs] as? [Int] ?? []
+        let genderPref = documentData[FBKeys.User.genderPref] as? [Int] ?? []
+        let agePref = documentData[FBKeys.User.agePref] as? [Int] ?? []
+        let locPref = documentData[FBKeys.User.locPref] as? [[String]] ?? []
+        let zodPref = documentData[FBKeys.User.zodPref] as? [Int] ?? []
+        let mbtiPref = documentData[FBKeys.User.mbtiPref] as? [Int] ?? []
+        let emojiPref = documentData[FBKeys.User.emojiPref] as? [String] ?? []
         
         let swiped = documentData[FBKeys.User.swiped] as? [String] ?? []
         let swipedBy = documentData[FBKeys.User.swipedBy] as? [String] ?? []
@@ -97,14 +109,18 @@ extension FBUser {
                   emoji: emoji,
                   zodiac: zodiac,
                   mbti: mbti,
-                  pref: pref,
+                  genderPref: genderPref,
                   agePref: agePref,
+                  locPref: locPref,
+                  zodPref: zodPref,
+                  mbtiPref: mbtiPref,
+                  emojiPref: emojiPref,
                   swiped: swiped,
                   swipedBy: swipedBy
         )
     }
     
-    static func dataDict(uid: String, email: String, firstName: String, lastName: String, age: Int, imgs: [Int:UIImage] = [:], pronouns: Int = -1, loc: [String] = [], bio: String = "", emoji: String = "", zodiac: Int = -1, mbti: Int = -1, pref: Int = -1, agePref: [Int] = [], swiped: [String] = [], swipedBy: [String] = []) -> [String: Any] {
+    static func dataDict(uid: String, email: String, firstName: String, lastName: String, age: Int, imgs: [Int:UIImage] = [:], pronouns: Int = -1, loc: [String] = [], bio: String = "", emoji: String = "", zodiac: Int = -1, mbti: Int = -1, genderPref: [Int] = [], agePref: [Int] = [], locPref: [[String]] = [], zodPref: [Int] = [], mbtiPref: [Int] = [], emojiPref: [String] = [], swiped: [String] = [], swipedBy: [String] = []) -> [String: Any] {
         
         var data: [String: Any] = [:]
         
@@ -123,8 +139,12 @@ extension FBUser {
                 FBKeys.User.emoji: emoji,
                 FBKeys.User.zodiac: zodiac,
                 FBKeys.User.mbti: mbti,
-                FBKeys.User.pref: pref,
+                FBKeys.User.genderPref: genderPref,
                 FBKeys.User.agePref: agePref,
+                FBKeys.User.locPref: locPref,
+                FBKeys.User.zodPref: zodPref,
+                FBKeys.User.mbtiPref: mbtiPref,
+                FBKeys.User.emojiPref: emojiPref,
                 FBKeys.User.swiped: swiped,
                 FBKeys.User.swipedBy: swipedBy
             ]

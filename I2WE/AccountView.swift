@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
@@ -15,8 +14,7 @@ struct AccountView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var showError = false
     @State var errorString = ""
-    
-    var good: Int = FBAuth.getCurUser()
+    @State var userData: [String: Any] = FBActions.getCurUser()
 
     var body: some View {
         

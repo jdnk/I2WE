@@ -11,6 +11,6 @@ class PronounStore: ObservableObject {
     @Published var pronouns: [Int:String] = [
         0:"He/Him",
         1:"She/Her",
-        2:"They/Them",
+        2:"They/Them"
     ]
 }
